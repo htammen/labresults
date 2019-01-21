@@ -1,14 +1,48 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <FdShell>
+      <FdShellHeader>
+        <ShellHeader></ShellHeader>
+      </FdShellHeader>
+      <FdApp>
+        <FdAppNavigation orientation="vertical">
+          <FdSideNav>
+            <FdSideNavGroup>
+              <FdSideNavList>
+                <FdSideNavItem>
+                  <FdSideNavLink to="/">Home</FdSideNavLink>
+                </FdSideNavItem>
+                <FdSideNavItem>
+                  <FdSideNavLink to="/en/about">About</FdSideNavLink>
+                </FdSideNavItem>
+              </FdSideNavList>
+            </FdSideNavGroup>
+          </FdSideNav>
+        </FdAppNavigation>
+        <FdAppMain>
+          <router-view/>
+        </FdAppMain>
+      </FdApp>
+      <FdShellFooter>Footer</FdShellFooter>
+    </FdShell>
   </div>
 </template>
 
-<style>
+<script>
+import ShellHeader from "@/components/ShellHeader.vue";
+
+export default {
+  name: "App",
+  components: {
+    ShellHeader
+  }
+}
+</script>
+
+
+<style lang="scss">
+@import "./scss/main.scss";
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

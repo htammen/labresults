@@ -1,0 +1,9 @@
+{
+	"welcome_message": "Willkommen bei Ihrer Vue.js App",
+	"popular_links": "Populäre Links",
+	"ecosystem": "Ecosystem",
+	"appName": "LabResults",
+	"appTitle": "Ihre LabResult Werte",
+	"appSubtitle": "Ihre persönlichen Laborwerte im Überblick",
+	"tableDataCountLabel": "Sie haben {count} Einträge"
+  }
